@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+ <meta charset="UTF-8">
+    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="JavaScript/JavaScript.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Management System </title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+   <link href="assets/styles/css/themes/lite-purple.css" rel="stylesheet" />
+    <%--<link href="assets/styles/css/themes/lite-blue.min.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="assets/styles/vendor/perfect-scrollbar.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+   <body class="text-left">
+    <form id="form1" runat="server">
+    
+    <div class="app-admin-wrap layout-sidebar-large clearfix ">
+        <div class="main-header bg-light">
+            <div class="logo">
+                <%--<img src="./assets/images/logo.png" alt="">--%>
+               <img src="userpic/TestMaster/logo2.png" />
+            </div>
+
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div style="margin: auto"></div>
+
+            <div class="header-part-right">
+                <!-- Full screen toggle -->
+                <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
+                <!-- Grid menu Dropdown -->
+               
+             
+
+                <!-- User avatar dropdown -->
+                <div class="dropdown">
+                    <div class="user  col align-self-end">
+                        <img src="./assets/images/faces/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-header">
+                                <i class="i-Lock-User mr-1"></i> Abdul Al-Dulaimi
+                            </div>
+                            <a href="myprofile.aspx" class="dropdown-item">My Profile</a>
+                            <a href="changepassword.aspx" class="dropdown-item">Change Password</a>
+                            <a href="signout.aspx" class="dropdown-item">Sign Out</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- User avatar dropdown -->
+            </div>
+
+        </div>
+
+        <div class="side-content-wrap ">
+            <div class="sidebar-left bg-light open rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
+                <ul class="navigation-left">
+                    <li class="nav-item " id="lidashboard">
+                        <a class="nav-item-hold" href="dashboard.aspx">
+                            <i class="nav-icon i-Bar-Chart"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" id="liuserlist">
+                        <a class="nav-item-hold" href="userlist.aspx">
+                            <i class="nav-icon i-Library"></i>
+                            <span class="nav-text">Users</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" id="litesttypelist">
+                        <a class="nav-item-hold" href="testtypelist.aspx">
+                            <i class="nav-icon i-Suitcase"></i>
+                            <span class="nav-text">Test Type</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" id="litestmasterlist">
+                        <a class="nav-item-hold" href="testmasterlist.aspx">
+                            <i class="nav-icon i-Computer-Secure"></i>
+                            <span class="nav-text">Test Master</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" id="liallocatetest">
+                        <a class="nav-item-hold" href="allocatetest.aspx">
+                            <i class="nav-icon i-File-Clipboard-File--Text"></i>
+                            <span class="nav-text">Allocate Test</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                       <li class="nav-item" id="liusertest">
+                        <a class="nav-item-hold" href="usertest.aspx">
+                            <i class="nav-icon i-File-Clipboard-File--Text"></i>
+                            <span class="nav-text">User Test</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" id="lireports">
+                        <a class="nav-item-hold" href="reports.aspx">
+                            <i class="nav-icon i-File-Horizontal-Text"></i>
+                            <span class="nav-text">Reports</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" id="lisignout">
+                        <a class="nav-item-hold" href="signout.aspx">
+                            <i class="nav-icon i-Administrator"></i>
+                            <span class="nav-text">Sign Out</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                   
+                </ul>
+            </div>
+
+            
+           
+        </div>
+        <!--=============== Left side End ================-->
+
+       
+    </div>
+    <!--=============== End app-admin-wrap ================-->
+
+ 
+
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/es5/echart.options.min.js"></script>
+    <script src="assets/js/es5/script.min.js"></script>
+    <script src="assets/js/es5/sidebar.large.script.min.js"></script>t>                     <script>
+            var AlllistItem = document.getElementsByClassName('nav-item active');
+            //alert(AlllistItem.length);
+            for (var iCount = 0; iCount < AlllistItem.length; iCount++) {
+                //alert(AlllistItem[iCount].id);
+                document.getElementById(AlllistItem[iCount].id).className = "nav-item";
+            }
+
+            const currentUrl = window.location.href.toLowerCase();
+            // alert(currentUrl.indexOf('dashboard.aspx'));
+
+            if (currentUrl.indexOf('dashboard.aspx') > -1) {
+                document.getElementById('lidashboard').className = "nav-item active";
+            }
+            else if (currentUrl.indexOf('userlist.aspx') > -1 || currentUrl.indexOf('adduser.aspx') > -1 || currentUrl.indexOf('edituser.aspx') > -1) {
+                document.getElementById('liuserlist').className = "nav-item active";
+            }
+            else if (currentUrl.indexOf('testtypelist.aspx') > -1 || currentUrl.indexOf('addtesttype.aspx') > -1 || currentUrl.indexOf('edittesttype.aspx') > -1) {
+                document.getElementById('litesttypelist').className = "nav-item active";
+            }
+            else if (currentUrl.indexOf('testmasterlist.aspx') > -1 || currentUrl.indexOf('addtestmaster.aspx') > -1 || currentUrl.indexOf('edittestmaster.aspx') > -1) {
+                document.getElementById('litestmasterlist').className = "nav-item active";
+            }
+            else if (currentUrl.indexOf('allocatetest.aspx') > -1) {
+                document.getElementById('liallocatetest').className = "nav-item active";
+            }
+            else if (currentUrl.indexOf('reports.aspx') > -1) {
+                document.getElementById('lireports').className = "nav-item active";
+             }
+
+            else if (currentUrl.indexOf('usertest.aspx') > -1) {
+                document.getElementById('liusertest').className = "nav-item active";
+            }
+           
+
+
+    </script>                    
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+     
+    </form>
+</body>
+</html>
